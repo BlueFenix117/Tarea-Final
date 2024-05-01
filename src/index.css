@@ -11,3 +11,36 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.main-navbar{
+  background-color: blueviolet;
+}
+
+.nav-item{
+  list-style: none;
+}
+
+.link{
+  text-decoration: none;
+  color: white;
+  margin-right: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.link:hover{
+  color: greenyellow;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.link.active{
+  text-decoration: underline;
+}
+
+.grid-example{
+  background-color: blueviolet;
+  color: white;
+  text-align: center;
+  margin: 5px 10px;
+}
