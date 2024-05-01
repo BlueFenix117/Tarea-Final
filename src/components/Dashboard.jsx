@@ -14,10 +14,9 @@ const Dashboard = (props) => {
 
   const handleCreateShow= () => setCreateModal(true);
   const handleCreateHide= () => setCreateModal(false);
-  // const handleRefresh = () => {(event) => {
-  //   alumnos.useFetch();
-  // }
-  // };
+  const handleRefresh = () => {
+    
+   };
 
   const showSwal = (message) => {
     withReactContent(Swal).fire({
@@ -33,13 +32,11 @@ const Dashboard = (props) => {
     <div className='container'>
         <div className='dashboard-options d-flex justify-content-end'>
           <button className='btn btn-primary mx-2' onClick={handleCreateShow}>Agregar Alumno</button>
-          <button className='btn btn-primary' onClick={(event) => {
-    alumnos.useFetch();
-  }}>Actualizar</button>
+          <button className='btn btn-primary' onClick={handleRefresh}>Actualizar</button>
         </div>
         <hr />
 
-        {error & <h2 className='text-center'>Error:{error}</h2>}
+        {error && <h2 className='text-center'>Error:{error}</h2>}
         {isLoading ? (<h2 className='text-center'>Loading...</h2>):(
 
       <table className='table table-striped'>
