@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 export function useFetch(url){
-    const [alumnos, setAlumnos] = useState([]);
+    const [data, setData] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
 
@@ -15,10 +15,10 @@ export function useFetch(url){
             }
         })
             .then((response) => response.json())
-            .then((data) => setAlumnos(data.model))
+            .then((data) => setData(data.model))
             .catch((error) => setError(error))
             .finally(() => setIsLoading(false))
     },[])
 
-    return {alumnos, isLoading, error};
+    return {data, isLoading, error};
 }

@@ -1,22 +1,23 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import { useFetch } from '../hooks/useFetch'
 import Modal from 'react-bootstrap/Modal'
 import { usePostFetch } from '../hooks/usePostFetch'
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 
-const Dashboard = (props) => {
+const Alumnos = (props) => {
 
-  const {alumnos, isLoading, error} = useFetch('https://localhost:7058/Colegio/api/Alumnos/ObtenerAlumnos');
+  const {data, isLoading, error} = useFetch('https://localhost:7058/Colegio/api/Alumnos/ObtenerAlumnos');
   const createAlumnoRequest = usePostFetch('https://localhost:7058/Colegio/api/Alumnos/AgregarAlumnos');
 
   const [createModal, setCreateModal] = useState(false);
+  const tableRef = useRef(null);
 
-  const handleCreateShow= () => setCreateModal(true);
-  const handleCreateHide= () => setCreateModal(false);
+  const handleCreateShow = () => setCreateModal(true);
+  const handleCreateHide = () => setCreateModal(false);
   const handleRefresh = () => {
-    
-   };
+    tableRef.current.forceUpdate();
+  };
 
   const showSwal = (message) => {
     withReactContent(Swal).fire({
@@ -39,7 +40,7 @@ const Dashboard = (props) => {
         {error && <h2 className='text-center'>Error:{error}</h2>}
         {isLoading ? (<h2 className='text-center'>Loading...</h2>):(
 
-      <table className='table table-striped'>
+      <table className='table table-striped' ref={tableRef}>
         <thead>
           <tr>
             <th>ID</th>
@@ -51,7 +52,7 @@ const Dashboard = (props) => {
           </tr>
         </thead>
         <tbody>
-          {alumnos?.map((alumno) => (
+          {data?.map((alumno) => (
             <tr key={alumno.idAlumno}>
               <th>{alumno.idAlumno}</th>
               <th>{alumno.nombre}</th>
@@ -131,4 +132,4 @@ const Dashboard = (props) => {
   )
 }
 
-export default Dashboard
+export default Alumnos

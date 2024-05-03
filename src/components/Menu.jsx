@@ -20,19 +20,19 @@ const Menu = () => {
                     to='/'
                     className={({isActive}) => (`link ${isActive ? 'active' : ''}`)}
                     >
-                        Dashboard
+                        Alumnos
                     </NavLink>
                     <NavLink 
-                    to='/admin'
+                    to='/docentes'
                     className={({isActive}) => (`link ${isActive ? 'active': ''}`)}
                     >
-                        Admin
+                        Docentes
                     </NavLink>
                     <NavLink 
-                    to='/profile'
+                    to='/materias'
                     className={({isActive}) => (`link ${isActive ? 'active': ''}`)}
                     >
-                        Profile
+                        Materias
                     </NavLink>
                 </li>
             </ul>
