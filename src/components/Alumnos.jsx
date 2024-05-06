@@ -7,8 +7,8 @@ import withReactContent from 'sweetalert2-react-content'
 
 const Alumnos = (props) => {
 
-  const {data, isLoading, error} = useFetch('https://localhost:7058/Colegio/api/Alumnos/ObtenerAlumnos');
-  const createAlumnoRequest = usePostFetch('https://localhost:7058/Colegio/api/Alumnos/AgregarAlumnos');
+  const {data, isLoading, error} = useFetch('https://backcolegiosebas.azurewebsites.net/Colegio/api/Alumnos/ObtenerAlumnos');
+  const createAlumnoRequest = usePostFetch('https://backcolegiosebas.azurewebsites.net/Colegio/api/Alumnos/AgregarAlumnos');
 
   const [createModal, setCreateModal] = useState(false);
   const tableRef = useRef(null);

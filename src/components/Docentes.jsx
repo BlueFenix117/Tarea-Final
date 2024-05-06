@@ -3,7 +3,7 @@ import { useFetch } from '../hooks/useFetch'
 
 const Docentes = () => {
 
-  const {data, isLoading, error} = useFetch('https://localhost:7058/Colegio/api/Docentes');
+  const {data, isLoading, error} = useFetch('https://backcolegiosebas.azurewebsites.net/Colegio/api/Docentes');
 
   const tableRef = useRef(null);
 
