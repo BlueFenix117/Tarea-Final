@@ -15,9 +15,6 @@ const Alumnos = (props) => {
 
   const handleCreateShow = () => setCreateModal(true);
   const handleCreateHide = () => setCreateModal(false);
-  const handleRefresh = () => {
-    tableRef.current.forceUpdate();
-  };
 
   const showSwal = (message) => {
     withReactContent(Swal).fire({
@@ -33,7 +30,6 @@ const Alumnos = (props) => {
     <div className='container'>
         <div className='dashboard-options d-flex justify-content-end'>
           <button className='btn btn-primary mx-2' onClick={handleCreateShow}>Agregar Alumno</button>
-          <button className='btn btn-primary' onClick={handleRefresh}>Actualizar</button>
         </div>
         <hr />
 
