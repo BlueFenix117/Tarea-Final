@@ -53,7 +53,7 @@ const Alumnos = (props) => {
               <th>{alumno.idAlumno}</th>
               <th>{alumno.nombre}</th>
               <th>{alumno.apellido}</th>
-              <th>{alumno.f_nacimiento}</th>
+              <th>{alumno.F_Nacimiento}</th>
               <th>{alumno.idCarrera}</th>
               <th>{alumno.telefono}</th>
             </tr>
