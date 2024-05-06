@@ -53,7 +53,7 @@ const Alumnos = (props) => {
               <th>{alumno.idAlumno}</th>
               <th>{alumno.nombre}</th>
               <th>{alumno.apellido}</th>
-              <th>{alumno.F_Nacimiento}</th>
+              <th>{alumno.f_Nacimiento}</th>
               <th>{alumno.idCarrera}</th>
               <th>{alumno.telefono}</th>
             </tr>
@@ -76,7 +76,7 @@ const Alumnos = (props) => {
             let payload = {}
             payload.nombre = document.getElementById('createNombre').value;
             payload.apellido = document.getElementById('createApellido').value;
-            payload.fnacimiento = document.getElementById('createFnacimiento').value;
+            payload.f_Nacimiento = document.getElementById('createFnacimiento').value;
             payload.idcarrera = document.getElementById('createIDcarrera').value;
             payload.telefono = document.getElementById('createTelefono').value;
 
