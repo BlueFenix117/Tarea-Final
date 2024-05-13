@@ -4,6 +4,7 @@ import Modal from 'react-bootstrap/Modal'
 import { usePostFetch } from '../hooks/usePostFetch'
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
+import Sidebar from './Sidebar'
 
 const Alumnos = (props) => {
 
@@ -29,14 +30,14 @@ const Alumnos = (props) => {
   return (
     <div className='container'>
         <div className='dashboard-options d-flex justify-content-end'>
-          <button className='btn btn-primary mx-2' onClick={handleCreateShow}>Agregar Alumno</button>
+          <button className='btn btn-primary mx-2 mt-4' onClick={handleCreateShow}>Agregar Alumno</button>
         </div>
         <hr />
 
         {error && <h2 className='text-center'>Error:{error}</h2>}
         {isLoading ? (<h2 className='text-center'>Loading...</h2>):(
 
-      <table className='table table-striped' ref={tableRef}>
+      <table className='table table-striped mx-5' ref={tableRef}>
         <thead>
           <tr>
             <th>ID</th>

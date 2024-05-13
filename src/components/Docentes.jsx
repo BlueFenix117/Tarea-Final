@@ -12,7 +12,7 @@ const Docentes = () => {
     {error && <h2 className='text-center'>Error:{error}</h2>}
     {isLoading ? (<h2 className='text-center'>Loading...</h2>):(
 
-       <table className='table table-striped' ref={tableRef}>
+       <table className='table table-striped mx-5' ref={tableRef}>
          <thead>
            <tr>
              <th>Nombre</th>

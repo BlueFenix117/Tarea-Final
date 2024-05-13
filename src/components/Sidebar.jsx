@@ -1,18 +1,12 @@
 import React from 'react'
-// import { Link} from 'react-router-dom'
 import { NavLink } from 'react-router-dom'
 
-const Menu = () => {
+const Sidebar = () => {
   return (
-        <nav className='main-navbar'>
-            <ul className='d-flex justify-content-end px-5 py-3'>
-                <li className='nav-item'>
-                <NavLink 
-                    to='/login'
-                    className={({isActive}) => (`link ${isActive ? 'active' : ''}`)}
-                    >
-                        Login
-                    </NavLink>
+    <div className='sidebar mb-md-0 me-md-auto p-3 text-white'>
+        <h3 className='mb-5'>B MORE</h3>
+        <hr/>
+        <ul className='nav nav-pills flex-column mb-auto'>
                     <NavLink 
                     to='/'
                     className={({isActive}) => (`link ${isActive ? 'active' : ''}`)}
@@ -31,10 +25,10 @@ const Menu = () => {
                     >
                         Materias
                     </NavLink>
-                </li>
-            </ul>
-        </nav>
+      
+    </ul>
+        </div>
   )
 }
 
-export default Menu
+export default Sidebar
